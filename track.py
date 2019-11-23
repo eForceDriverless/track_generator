@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from tsp import tsp
 import time
 import math
 

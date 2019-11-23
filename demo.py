@@ -8,8 +8,8 @@ from track import make_track
 fig, ax = plt.subplots()
 plt.subplots_adjust(left=0.15, bottom=0.35)
 
-bumps = [(0, 0.2), (0.2, 0.4), (0.4, 0.6), (0.6, 0.8), (0.8, 0.99)]
-_, inner, outer = make_track(bumps=bumps)
+# bumps = [(0, 0.2), (0.2, 0.4), (0.4, 0.6), (0.6, 0.8), (0.8, 0.99)]
+_, inner, outer = make_track()
 
 ax.scatter(inner[:, 0], inner[:, 1], s=1)
 ax.scatter(outer[:, 0], outer[:, 1], s=1)
@@ -45,7 +45,7 @@ def update(val):
 
     ax.clear()
     _, inner, outer = make_track(
-        sigma=sigma, track_width=track_width, bumps=bumps,
+        sigma=sigma, track_width=track_width,
         density=density, bump_scale=scale, ellipse_shape=(u, v)
     )
     ax.scatter(inner[:, 0], inner[:, 1], s=1)
